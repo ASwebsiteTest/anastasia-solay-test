@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasia Solay | Official Website</title>
+    <!-- Google Fonts for premium editorial typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght=200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for clean aesthetic icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: {
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA7C11'
+                        },
+                        obsidian: {
+                            DEFAULT: '#0A0A0A',
+                            panel: '#121212',
+                            light: '#1A1A1A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scroll behavior and sleek premium scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+        /* Elegant selection highlights mimicking warm gold glow */
+        ::selection {
+            background-color: rgba(212, 175, 55, 0.25);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-neutral-100 font-sans antialiased selection:bg-accent-gold/20 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-obsidian/40 backdrop-blur-md border-b border-white/5" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Brand Logo / Signature Style Heading -->
+            <a href="#home" class="font-serif text-xl tracking-[0.25em] text-white hover:text-accent-gold transition-colors duration-300">
+                ANASTASIA SOLAY
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-400">
+                <a href="#home" class="hover:text-white hover:underline decoration-accent-gold underline-offset-4 transition-all duration-300">Home</a>
+                <a href="#music" class="hover:text-white hover:underline decoration-accent-gold underline-offset-4 transition-all duration-300">Music</a>
+                <a href="#videos" class="hover:text-white hover:underline decoration-accent-gold underline-offset-4 transition-all duration-300">Videos</a>
+                <a href="#about" class="hover:text-white hover:underline decoration-accent-gold underline-offset-4 transition-all duration-300">About</a>
+                <a href="#shows" class="hover:text-white hover:underline decoration-accent-gold underline-offset-4 transition-all duration-300">Shows</a>
+                <a href="#contact" class="hover:text-white hover:underline decoration-accent-gold underline-offset-4 transition-all duration-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="md:hidden text-white hover:text-accent-gold transition-colors duration-200" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="hidden absolute top-full left-0 w-full bg-obsidian/95 border-b border-neutral-800 flex flex-col items-center gap-6 py-8 text-xs tracking-widest uppercase md:hidden" id="mobileMenu">
+            <a href="#home" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Home</a>
+            <a href="#music" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Music</a>
+            <a href="#videos" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Videos</a>
+            <a href="#about" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">About</a>
+            <a href="#shows" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Shows</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Contact</a>
+            <a href="#newsletter" onclick="toggleMenu()" class="mt-2 px-6 py-2.5 bg-accent-gold text-obsidian rounded-full font-bold">Stay Close</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (First Screen Focus with integrated interactive slide showcase) -->
+    <section id="home" class="relative min-h-screen py-24 flex flex-col items-center justify-center overflow-hidden bg-obsidian">
+        <!-- Subtle radial highlight behind content -->
+        <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.015),transparent_70%)]"></div>
+
+        <!-- Content Core Container -->
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-6 mt-12 w-full">
+            <div class="space-y-4">
+                <span class="text-xs uppercase tracking-[0.4em] text-accent-gold font-medium block animate-[fadeIn_1.2s_ease-out]">
+                    Singer • Songwriter • Storyteller
+                </span>
+                <p class="text-sm md:text-base tracking-[0.15em] font-light text-neutral-400 italic">
+                    "New single available now."
+                </p>
+            </div>
+
+            <!-- Integrated Automatic Carousel Window (Slow-burn merging slides) -->
+            <div class="relative w-full max-w-3xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800/80 shadow-2xl group" id="carouselContainer">
+                
+                <!-- Carousel Slides Wrapper -->
+                <div class="w-full h-full relative">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10">
+                        <!-- CHANGE "object-cover" TO "object-contain bg-black" BELOW -->
+                        <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Anastasia Solay live backstage portrait" 
+                             class="w-full h-full object-contain object-center bg-black filter brightness-[0.6] contrast-[1.05]"
+                             onerror="this.src='photo1.jpg'">
+                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20 text-left">
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-accent-gold font-semibold block mb-1">Live Venue</span>
+                            <h3 class="font-serif text-lg md:text-2xl text-white font-light">Late Night Vignettes Session</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                        <!-- CHANGE "object-cover" TO "object-contain bg-black" BELOW -->
+                        <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Anastasia Solay piano recording frame" 
+                             class="w-full h-full object-contain object-center bg-black filter brightness-[0.6] contrast-[1.05]"
+                             onerror="this.src='photo2.jpg'">
+                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20 text-left">
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-accent-gold font-semibold block mb-1">Studio Space</span>
+                            <h3 class="font-serif text-lg md:text-2xl text-white font-light">Tracking "Sonic Boom" Piano Layers</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                        <!-- CHANGE "object-cover" TO "object-contain bg-black" BELOW -->
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Anastasia Solay stage performance graphics" 
+                             class="w-full h-full object-contain object-center bg-black filter brightness-[0.6] contrast-[1.05]"
+                             onerror="this.src='photo3.jpg'">
+                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20 text-left">
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-accent-gold font-semibold block mb-1">Backstage</span>
+                            <h3 class="font-serif text-lg md:text-2xl text-white font-light">Moments Before the Geneva Showcase</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                        <!-- CHANGE "object-cover" TO "object-contain bg-black" BELOW -->
+                        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Anastasia Solay analog music tape loops" 
+                             class="w-full h-full object-contain object-center bg-black filter brightness-[0.6] contrast-[1.05]"
+                             onerror="this.src='photo4.jpg'">
+                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20 text-left">
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-accent-gold font-semibold block mb-1">Aesthetic Archive</span>
+                            <h3 class="font-serif text-lg md:text-2xl text-white font-light">Reflecting Creative Tape Loops</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Navigation Arrow -->
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 bg-black/40 hover:bg-accent-gold/90 text-white hover:text-obsidian rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95" aria-label="Previous Slide">
+                    <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+                </button>
+
+                <!-- Right Navigation Arrow -->
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 bg-black/40 hover:bg-accent-gold/90 text-white hover:text-obsidian rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95" aria-label="Next Slide">
+                    <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+                </button>
+
+                <!-- Vignette Cover Shield -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none z-15"></div>
+            </div>
+
+            <!-- Carousel Indicator Dots -->
+            <div class="flex justify-center items-center gap-3">
+                <button onclick="goToSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-accent-gold transition-all duration-300" aria-label="Slide 1 navigation"></button>
+                <button onclick="goToSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-neutral-600 hover:bg-neutral-400 transition-all duration-300" aria-label="Slide 2 navigation"></button>
+                <button onclick="goToSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-neutral-600 hover:bg-neutral-400 transition-all duration-300" aria-label="Slide 3 navigation"></button>
+                <button onclick="goToSlide(3)" class="carousel-dot w-2 h-2 rounded-full bg-neutral-600 hover:bg-neutral-400 transition-all duration-300" aria-label="Slide 4 navigation"></button>
+            </div>
+
+            <!-- Clean, Highly-Structured CTA Row (Completely free of redundant view gallery options) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
+                <a href="#music" class="w-full sm:w-auto px-8 py-4 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-full shadow-lg hover:shadow-accent-gold/20 transition-all duration-300 flex items-center justify-center gap-2 font-bold">
+                    <i class="fa-solid fa-play"></i> Listen Now
+                </a>
+                <a href="#newsletter" class="w-full sm:w-auto px-8 py-4 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-full shadow-lg hover:shadow-accent-gold/20 transition-all duration-300 flex items-center justify-center gap-2 font-bold">
+                    <i class="fa-solid fa-paper-plane"></i> Join Community
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-neutral-500 animate-bounce">
+            <span class="text-[9px] tracking-[0.3em] uppercase">Scroll</span>
+            <i class="fa-solid fa-chevron-down text-sm"></i>
+        </div>
+    </section>
+
+    <!-- Featured Release Section (One-click Streaming) -->
+    <section id="music" class="py-24 px-6 relative bg-gradient-to-b from-obsidian to-neutral-950 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Side: Cover Art Presentation Block -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group max-w-sm w-full aspect-square bg-neutral-900 rounded-xl overflow-hidden shadow-2xl border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=800&auto=format&fit=crop" 
+                         alt="Anastasia Solay - Latest Single Artwork: Late Night Vignette" 
+                         class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x800/121212/ffffff?text=Latest+Single'">
+                    <!-- Vignette Border overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <!-- Minimal overlay artwork status -->
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <div>
+                            <span class="text-[10px] font-semibold text-accent-gold tracking-widest uppercase block mb-1">New Single Out Now</span>
+                            <h3 class="font-serif text-xl text-white font-medium tracking-wide">Vignettes in Geneva</h3>
+                        </div>
+                        <span class="text-[10px] text-neutral-400 font-mono tracking-wider">RE-2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Release Info & Direct Streaming Connections -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="space-y-4">
+                    <span class="text-xs uppercase tracking-[0.3em] text-accent-gold font-medium">Featured Release</span>
+                    <h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-wide">Vignettes in Geneva</h2>
+                    <p class="text-neutral-400 leading-relaxed font-light text-sm md:text-base">
+                        "An intimate tapestry of piano notes and raw cassette field recordings. This track is a direct window into late-night walks along the lake, tracing stories told by quiet silhouettes under Geneva streetlamps."
+                    </p>
+                </div>
+
+                <!-- Instant One-Click Streaming Hub -->
+                <div class="space-y-3">
+                    <h4 class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Select Streaming Platform</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        
+                        <!-- Spotify -->
+                        <a href="https://open.spotify.com/artist/3U1so4sDb6isDa2LZACyiq" target="_blank" class="flex items-center justify-between p-4 bg-obsidian-panel hover:bg-neutral-900 border border-neutral-800 hover:border-accent-gold/40 rounded-xl transition-all duration-300 group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-brands fa-spotify text-green-500 text-xl"></i>
+                                <span class="text-xs font-semibold tracking-wider text-neutral-200">Spotify</span>
+                            </div>
+                            <span class="text-[10px] text-accent-gold tracking-widest uppercase flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Listen <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Apple Music -->
+                        <a href="https://apple.com/music" target="_blank" class="flex items-center justify-between p-4 bg-obsidian-panel hover:bg-neutral-900 border border-neutral-800 hover:border-accent-gold/40 rounded-xl transition-all duration-300 group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-brands fa-apple text-pink-500 text-xl"></i>
+                                <span class="text-xs font-semibold tracking-wider text-neutral-200">Apple Music</span>
+                            </div>
+                            <span class="text-[10px] text-accent-gold tracking-widest uppercase flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Listen <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- YouTube Music -->
+                        <a href="https://youtube.com" target="_blank" class="flex items-center justify-between p-4 bg-obsidian-panel hover:bg-neutral-900 border border-neutral-800 hover:border-accent-gold/40 rounded-xl transition-all duration-300 group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-brands fa-youtube text-red-600 text-xl"></i>
+                                <span class="text-xs font-semibold tracking-wider text-neutral-200">YouTube</span>
+                            </div>
+                            <span class="text-[10px] text-accent-gold tracking-widest uppercase flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Listen <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Amazon Music -->
+                        <a href="https://music.amazon.com" target="_blank" class="flex items-center justify-between p-4 bg-obsidian-panel hover:bg-neutral-900 border border-neutral-800 hover:border-accent-gold/40 rounded-xl transition-all duration-300 group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-brands fa-amazon text-blue-400 text-xl"></i>
+                                <span class="text-xs font-semibold tracking-wider text-neutral-200">Amazon Music</span>
+                            </div>
+                            <span class="text-[10px] text-accent-gold tracking-widest uppercase flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Listen <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                            </span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Latest Video Section (Direct Play Panel) -->
+    <section id="videos" class="py-24 px-6 bg-obsidian relative border-t border-white/5">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] text-accent-gold font-medium">Latest Music Video</span>
+                <h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-wide">Visuals & Performance</h2>
+                <p class="text-neutral-400 text-sm max-w-md mx-auto">Watch the official visual cinematic experience for "Vignettes in Geneva" directly below.</p>
+            </div>
+
+            <!-- Playback Embed Container -->
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800/80 shadow-2xl group">
+                <!-- Cover Overlay State (Loaded first to maintain visual branding) -->
+                <div class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-cover bg-center transition-all duration-500 group-hover:scale-102" id="videoCover" style="background-image: linear-gradient(rgba(10,10,10,0.5), rgba(10,10,10,0.75)), url('https://images.unsplash.com/photo-1514306191717-452ec28c7814?q=80&w=1200&auto=format&fit=crop');">
+                    <!-- Elegant Play Button Ring -->
+                    <button onclick="startVideo()" class="w-16 h-16 sm:w-20 sm:h-20 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-full flex items-center justify-center text-xl sm:text-2xl transition-all duration-300 transform hover:scale-110 shadow-lg active:scale-95 z-20">
+                        <i class="fa-solid fa-play ml-1"></i>
+                    </button>
+                    <span class="mt-4 text-[10px] sm:text-xs tracking-[0.25em] text-white/80 uppercase font-medium">Click to Play Instantly</span>
+                </div>
+
+                <!-- Video Frame Area -->
+                <div class="absolute inset-0 w-full h-full bg-black flex items-center justify-center">
+                    <iframe id="youtubeIframe" class="w-full h-full border-0 hidden" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- Offline/Demo Video Simulation Player -->
+                    <div id="videoSimulator" class="w-full h-full hidden flex flex-col items-center justify-center bg-neutral-950 text-neutral-400 font-mono text-[11px] space-y-4">
+                        <i class="fa-solid fa-compact-disc animate-spin text-3xl text-accent-gold"></i>
+                        <span>LOADING HIGH DEFINITION BROADCAST...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Anastasia Section (Expandable Biography Map) -->
+    <section id="about" class="py-24 px-6 bg-gradient-to-b from-obsidian to-neutral-950 relative border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Bio Graphic Cover -->
+            <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
+                <div class="relative max-w-sm w-full aspect-[3/4] rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                    <img src="LightBehind.png" 
+                         alt="Anastasia Solay backstage session portrait" 
+                         class="w-full h-full object-cover filter grayscale contrast-115 brightness-95"
+                         onerror="this.src='https://placehold.co/600x800/161616/ffffff?text=About+Anastasia'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- Right Bio Content Core -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                <span class="text-xs uppercase tracking-[0.3em] text-accent-gold font-medium">The Artist</span>
+                <h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-wide">About Anastasia</h2>
+                
+                <!-- Short Bio Snapshot -->
+                <p class="text-neutral-300 leading-relaxed font-light text-base md:text-lg">
+                    Born in San Francisco and based between Geneva and the international music scene, singer-songwriter Anastasia Solay creates emotionally driven music that blends personal storytelling with modern electronic and pop influences.
+                </p>
+
+                <!-- Dynamic Biography Expander Panel -->
+                <div id="fullBioContent" class="hidden space-y-4 text-neutral-400 text-sm leading-relaxed font-light pt-2 transition-all duration-500 border-t border-neutral-800/60">
+                    <p>
+                        Her songs explore the human experience—love, connection, resilience, personal growth, and the world around us. Each track reflects her journey as an artist and her ability to transform life experiences into honest, memorable melodies.
+                    </p>
+                    <p>
+                        Drawing inspiration from a wide range of musical influences, from classical composers such as Tchaikovsky to contemporary icons like Tupac, Anastasia brings together diverse sounds and perspectives to create a unique artistic identity.
+                    </p>
+                    <p>
+                        As the songwriter, composer, producer, and creative director of her projects, Anastasia maintains a strong artistic vision from the first idea to the final production. Her collaborations add new dimensions to her music while preserving the authenticity and emotional depth at the center of every song.
+                    </p>
+                    <p>
+                        Her latest project, Sonic Boom, explores themes of love, hope, and the value of every moment, inviting listeners to connect through shared emotions and experiences.
+                    </p>
+                </div>
+
+                <!-- Expander Control Button -->
+                <div class="pt-2">
+                    <button onclick="toggleBiography()" id="bioToggleBtn" class="text-xs font-semibold tracking-widest uppercase text-accent-gold hover:text-accent-goldLight transition-colors duration-300 flex items-center gap-2">
+                        <span>Read Full Biography</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Social Proof Section (Visual placements) -->
+    <section class="py-16 px-6 bg-[#0c0c0c] border-y border-white/5 relative z-10">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <h4 class="text-[10px] font-bold text-center text-neutral-500 uppercase tracking-widest">As Seen & Heard On</h4>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-40">
+                <!-- Spot 1: Festival Placement -->
+                <div class="flex items-center gap-2 group hover:opacity-100 transition-opacity duration-300 cursor-default">
+                    <i class="fa-solid fa-circle-nodes text-lg text-neutral-400"></i>
+                    <span class="font-serif tracking-widest font-semibold text-xs text-white">MONTREUX JAZZ</span>
+                </div>
+                <!-- Spot 2: Playlist placement -->
+                <div class="flex items-center gap-2 group hover:opacity-100 transition-opacity duration-300 cursor-default">
+                    <i class="fa-solid fa-microphone-lines text-lg text-neutral-400"></i>
+                    <span class="font-serif tracking-widest font-semibold text-xs text-white">SWISS RADIO ONE</span>
+                </div>
+                <!-- Spot 3: Press placement -->
+                <div class="flex items-center gap-2 group hover:opacity-100 transition-opacity duration-300 cursor-default">
+                    <i class="fa-solid fa-newspaper text-lg text-neutral-400"></i>
+                    <span class="font-serif tracking-widest font-semibold text-xs text-white">GENEVA CHRONICLE</span>
+                </div>
+                <!-- Spot 4: Playlist placement -->
+                <div class="flex items-center gap-2 group hover:opacity-100 transition-opacity duration-300 cursor-default">
+                    <i class="fa-solid fa-music text-lg text-neutral-400"></i>
+                    <span class="font-serif tracking-widest font-semibold text-xs text-white">SPOTIFY INDIE FOLK</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Shows Section (Tour listing & Fallback Toggle System) -->
+    <section id="shows" class="py-24 px-6 bg-obsidian relative">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+                <div class="space-y-3">
+                    <span class="text-xs uppercase tracking-[0.3em] text-accent-gold font-medium">Performance Schedule</span>
+                    <h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-wide">Upcoming Shows</h2>
+                </div>
+
+                <!-- Simulation Toggle Tool for testing fallback lists -->
+                <div class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 p-1.5 rounded-full self-start">
+                    <button onclick="toggleShowsDemo(true)" id="showsActiveBtn" class="px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold transition bg-accent-gold text-obsidian">
+                        Show Schedule
+                    </button>
+                    <button onclick="toggleShowsDemo(false)" id="showsEmptyBtn" class="px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold transition text-neutral-400 hover:text-white">
+                        Fallback View
+                    </button>
+                </div>
+            </div>
+
+            <!-- List 1: Live active show dates -->
+            <div id="activeShowsList" class="space-y-4">
+                
+                <!-- Show Row 1 -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 bg-obsidian-panel border border-neutral-800 hover:border-accent-gold/35 rounded-2xl transition-all duration-300 gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="text-center font-mono py-1 px-3 border border-neutral-800 bg-neutral-950/60 rounded-lg">
+                            <span class="text-accent-gold text-sm font-bold block">OCT</span>
+                            <span class="text-white text-lg block">14</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white tracking-wide uppercase">The Vinyl Room</h4>
+                            <p class="text-xs text-neutral-400">Geneva, Switzerland</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-neutral-800/60 sm:border-t-0 pt-4 sm:pt-0">
+                        <span class="text-xs text-neutral-400 font-mono">Doors: 19:30</span>
+                        <button onclick="openTicketsModal('Geneva', 'Oct 14', 'The Vinyl Room')" class="px-5 py-2.5 bg-neutral-900 hover:bg-accent-gold text-neutral-200 hover:text-obsidian text-[10px] tracking-widest uppercase font-bold rounded-lg border border-neutral-800 hover:border-transparent transition-all duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Show Row 2 -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 bg-obsidian-panel border border-neutral-800 hover:border-accent-gold/35 rounded-2xl transition-all duration-300 gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="text-center font-mono py-1 px-3 border border-neutral-800 bg-neutral-950/60 rounded-lg">
+                            <span class="text-accent-gold text-sm font-bold block">OCT</span>
+                            <span class="text-white text-lg block">22</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white tracking-wide uppercase">Les Docks</h4>
+                            <p class="text-xs text-neutral-400">Lausanne, Switzerland</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-neutral-800/60 sm:border-t-0 pt-4 sm:pt-0">
+                        <span class="text-xs text-neutral-400 font-mono">Doors: 20:00</span>
+                        <button onclick="openTicketsModal('Lausanne', 'Oct 22', 'Les Docks')" class="px-5 py-2.5 bg-neutral-900 hover:bg-accent-gold text-neutral-200 hover:text-obsidian text-[10px] tracking-widest uppercase font-bold rounded-lg border border-neutral-800 hover:border-transparent transition-all duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Show Row 3 -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 bg-obsidian-panel border border-neutral-800 hover:border-accent-gold/35 rounded-2xl transition-all duration-300 gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="text-center font-mono py-1 px-3 border border-neutral-800 bg-neutral-950/60 rounded-lg">
+                            <span class="text-accent-gold text-sm font-bold block">NOV</span>
+                            <span class="text-white text-lg block">05</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white tracking-wide uppercase">Volkshaus</h4>
+                            <p class="text-xs text-neutral-400">Zurich, Switzerland</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-neutral-800/60 sm:border-t-0 pt-4 sm:pt-0">
+                        <span class="text-xs text-neutral-400 font-mono">Doors: 19:00</span>
+                        <button onclick="openTicketsModal('Zurich', 'Nov 05', 'Volkshaus')" class="px-5 py-2.5 bg-neutral-900 hover:bg-accent-gold text-neutral-200 hover:text-obsidian text-[10px] tracking-widest uppercase font-bold rounded-lg border border-neutral-800 hover:border-transparent transition-all duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Show Row 4 -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 bg-obsidian-panel border border-neutral-800 hover:border-accent-gold/35 rounded-2xl transition-all duration-300 gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="text-center font-mono py-1 px-3 border border-neutral-800 bg-neutral-950/60 rounded-lg">
+                            <span class="text-accent-gold text-sm font-bold block">NOV</span>
+                            <span class="text-white text-lg block">18</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white tracking-wide uppercase">Ned Music Club</h4>
+                            <p class="text-xs text-neutral-400">Montreux, Switzerland</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-neutral-800/60 sm:border-t-0 pt-4 sm:pt-0">
+                        <span class="text-xs text-neutral-400 font-mono">Doors: 20:30</span>
+                        <button onclick="openTicketsModal('Montreux', 'Nov 18', 'Ned Music Club')" class="px-5 py-2.5 bg-neutral-900 hover:bg-accent-gold text-neutral-200 hover:text-obsidian text-[10px] tracking-widest uppercase font-bold rounded-lg border border-neutral-800 hover:border-transparent transition-all duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- List 2: Empty State Fallback -->
+            <div id="fallbackShowsList" class="hidden py-16 px-6 text-center border border-dashed border-neutral-800 rounded-2xl bg-neutral-950/40 space-y-4">
+                <i class="fa-solid fa-calendar-xmark text-4xl text-neutral-600"></i>
+                <div>
+                    <h4 class="text-base text-neutral-200 font-semibold tracking-wide">New performances coming soon.</h4>
+                    <p class="text-xs text-neutral-500 max-w-sm mx-auto mt-2">Sign up for our personal letter distribution to secure exclusive early booking codes as soon as dates are released.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Email Signup Section ("Stay Close" - Highly Personal) -->
+    <section id="newsletter" class="py-24 px-6 bg-[#0E0E0E] relative border-t border-white/5">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(214,175,55,0.05),transparent_60%)]"></div>
+        <div class="max-w-3xl mx-auto text-center relative z-10 space-y-8">
+            
+            <div class="space-y-3">
+                <h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-wide">Stay Close</h2>
+                <p class="text-neutral-300 leading-relaxed max-w-md mx-auto text-sm md:text-base font-light">
+                    Get new music, videos, and occasional letters from Anastasia.
+                </p>
+            </div>
+
+            <!-- Input field form block -->
+            <form id="letterForm" onsubmit="handleFormSubmit(event)" class="max-w-lg mx-auto flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-1">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-600"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" id="subscriberEmail" required placeholder="Enter your email address..." 
+                           class="w-full pl-11 pr-4 py-4 bg-obsidian border border-neutral-800 focus:border-accent-gold rounded-xl text-xs text-neutral-200 placeholder-neutral-500 focus:outline-none transition-all duration-300">
+                </div>
+                <button type="submit" class="px-8 py-4 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-xl text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-lg hover:shadow-accent-gold/10">
+                    Join
+                </button>
+            </form>
+
+            <span class="text-[10px] text-neutral-600 tracking-wider block">No spam. A direct manual channel connecting creator and listeners.</span>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-obsidian border-t border-white/5 pt-16 pb-12 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-neutral-900 pb-12 mb-12">
+            
+            <!-- Branding Zone -->
+            <div class="md:col-span-5 space-y-4">
+                <h3 class="font-serif text-xl text-white tracking-[0.25em] uppercase">Anastasia Solay</h3>
+                <p class="text-neutral-500 text-xs font-light leading-relaxed max-w-xs">
+                    Connecting emotional depth with modern synth-pop vulnerabilities. Cultivated with intention in Geneva, Switzerland.
+                </p>
+                <div class="flex gap-4 text-neutral-400">
+                    <a href="https://instagram.com" target="_blank" aria-label="Official Instagram" class="hover:text-accent-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="Official YouTube" class="hover:text-accent-gold transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://spotify.com" target="_blank" aria-label="Official Spotify" class="hover:text-accent-gold transition-colors"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://apple.com" target="_blank" aria-label="Official Apple Music" class="hover:text-accent-gold transition-colors"><i class="fa-brands fa-apple"></i></a>
+                </div>
+            </div>
+
+            <!-- Fast-jump Internal Links -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Navigation</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs text-neutral-400 font-light">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#music" class="hover:text-white transition-colors">Music</a>
+                    <a href="#videos" class="hover:text-white transition-colors">Videos</a>
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#shows" class="hover:text-white transition-colors">Shows</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Operational contact details -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Business & Press</h4>
+                <div class="space-y-2 text-xs text-neutral-400 font-light">
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-neutral-600"></i> management@anastasiasolay.com</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-neutral-600"></i> bookings@anastasiasolay.com</p>
+                    <div class="pt-2">
+                        <a href="#contact" onclick="triggerEPKDownload()" class="inline-flex items-center gap-2 text-[10px] tracking-wider uppercase text-accent-gold font-semibold hover:text-accent-goldLight">
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Download Press Kit (EPK)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-neutral-600 font-mono tracking-wider">
+            <span>© 2026 ANASTASIA SOLAY. ALL RIGHTS RESERVED.</span>
+            <div class="flex gap-4">
+                <a href="#home" class="hover:text-neutral-400">PRIVACY POLICY</a>
+                <span>|</span>
+                <a href="#home" class="hover:text-neutral-400">CREDITS</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Elegant Ticket Pre-Sale Modal Container -->
+    <div id="ticketsModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-obsidian/90 backdrop-blur-md">
+        <div class="bg-obsidian-panel border border-neutral-800 rounded-2xl w-full max-w-md p-6 relative shadow-2xl animate-[fadeIn_0.3s_ease-out]">
+            <button onclick="closeTicketsModal()" class="absolute top-4 right-4 text-neutral-500 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="space-y-4">
+                <span class="text-[10px] font-bold text-accent-gold tracking-widest uppercase">Secure Entry Tickets</span>
+                <h3 class="font-serif text-2xl text-white font-light tracking-wide" id="modalShowTitle">Tour Showcase</h3>
+                <p class="text-xs text-neutral-400" id="modalShowDetails">Date Details</p>
+
+                <hr class="border-neutral-800">
+
+                <div class="space-y-3">
+                    <label class="block text-[10px] text-neutral-500 uppercase tracking-widest">Select Ticket Type</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center justify-between p-3 border border-neutral-800 rounded-xl cursor-pointer hover:border-accent-gold/40">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="ticketType" checked class="accent-accent-gold">
+                                <span class="text-xs text-neutral-200">Standard Admission</span>
+                            </div>
+                            <span class="text-xs text-white font-bold font-mono">CHF 25.00</span>
+                        </label>
+                        <label class="flex items-center justify-between p-3 border border-neutral-800 rounded-xl cursor-pointer hover:border-accent-gold/40">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="ticketType" class="accent-accent-gold">
+                                <span class="text-xs text-neutral-200">Soundcheck VIP Pass</span>
+                            </div>
+                            <span class="text-xs text-white font-bold font-mono">CHF 65.00</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="handleTicketPurchase()" class="w-full py-4 mt-2 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-xl text-xs font-bold tracking-widest uppercase transition-all duration-300">
+                    Purchase Ticket
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Block -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-[120] transform translate-y-10 opacity-0 pointer-events-none transition-all duration-500 bg-accent-gold text-obsidian px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 font-semibold text-xs uppercase tracking-wider">
+        <span id="toastIcon"><i class="fa-solid fa-circle-check"></i></span>
+        <span id="toastMessage">Success</span>
+    </div>
+
+    <!-- Navigation Drawer Control -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Header Background Blur on Scroll Logic
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.remove('bg-obsidian/40');
+                header.classList.add('bg-obsidian/90', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-obsidian/90', 'shadow-lg');
+                header.classList.add('bg-obsidian/40');
+            }
+        });
+
+        // Expanded biography control
+        function toggleBiography() {
+            const fullBio = document.getElementById('fullBioContent');
+            const toggleBtn = document.getElementById('bioToggleBtn');
+            const isHidden = fullBio.classList.contains('hidden');
+
+            if (isHidden) {
+                fullBio.classList.remove('hidden');
+                toggleBtn.querySelector('span').textContent = 'Collapse Biography';
+                toggleBtn.querySelector('i').className = 'fa-solid fa-chevron-up text-[10px]';
+            } else {
+                fullBio.classList.add('hidden');
+                toggleBtn.querySelector('span').textContent = 'Read Full Biography';
+                toggleBtn.querySelector('i').className = 'fa-solid fa-chevron-down text-[10px]';
+            }
+        }
+
+        // Direct Video Playback system
+        function startVideo() {
+            const cover = document.getElementById('videoCover');
+            const iframe = document.getElementById('youtubeIframe');
+            const simulator = document.getElementById('videoSimulator');
+
+            cover.classList.add('opacity-0', 'pointer-events-none');
+            
+            // Replace with your real YouTube Video ID (e.g. replacing 'dQw4w9WgXcQ' with her asset ID)
+            const videoId = "dQw4w9WgXcQ"; 
+            
+            if(navigator.onLine) {
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0`;
+                iframe.classList.remove('hidden');
+            } else {
+                simulator.classList.remove('hidden');
+            }
+        }
+
+        // Photo Carousel Core Logic (Automatic Cinematic Crossfade Merge Style)
+        let activeIndex = 0;
+        const allSlides = document.querySelectorAll('.carousel-slide');
+        const allDots = document.querySelectorAll('.carousel-dot');
+        let autoSlideTimer = null;
+
+        function updateCarousel() {
+            allSlides.forEach((slide, idx) => {
+                if (idx === activeIndex) {
+                    slide.classList.remove('opacity-0', 'z-0');
+                    slide.classList.add('opacity-100', 'z-10');
+                } else {
+                    slide.classList.remove('opacity-100', 'z-10');
+                    slide.classList.add('opacity-0', 'z-0');
+                }
+            });
+
+            allDots.forEach((dot, idx) => {
+                if (idx === activeIndex) {
+                    dot.className = "carousel-dot w-2 h-2 rounded-full bg-accent-gold transition-all duration-300";
+                } else {
+                    dot.className = "carousel-dot w-2 h-2 rounded-full bg-neutral-600 hover:bg-neutral-400 transition-all duration-300";
+                }
+            });
+        }
+
+        function nextSlide() {
+            activeIndex = (activeIndex + 1) % allSlides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            activeIndex = (activeIndex - 1 + allSlides.length) % allSlides.length;
+            updateCarousel();
+        }
+
+        function goToSlide(idx) {
+            activeIndex = idx;
+            updateCarousel();
+            resetAutoSlide(); // Pause timer on manual engagement
+        }
+
+        // Automatic Slide Transition loop (Smooth cinematic crossfade cycle)
+        function startAutoSlide() {
+            autoSlideTimer = setInterval(() => {
+                nextSlide();
+            }, 5000); // Crossfades elegantly every 5 seconds
+        }
+
+        function resetAutoSlide() {
+            if (autoSlideTimer) {
+                clearInterval(autoSlideTimer);
+                startAutoSlide(); // restarts timer cleanly
+            }
+        }
+
+        // Touch swipe tracking implementation for mobile lookbook gestures
+        const carouselContainer = document.getElementById('carouselContainer');
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipeGesture();
+        }, { passive: true });
+
+        function handleSwipeGesture() {
+            const threshold = 50; // swipe offset threshold
+            if (touchStartX - touchEndX > threshold) {
+                nextSlide(); 
+                resetAutoSlide();
+            } else if (touchEndX - touchStartX > threshold) {
+                prevSlide(); 
+                resetAutoSlide();
+            }
+        }
+
+        // Upcoming Tour Schedule Dynamic fallback toggles
+        function toggleShowsDemo(showSchedule) {
+            const activeList = document.getElementById('activeShowsList');
+            const fallbackList = document.getElementById('fallbackShowsList');
+            const activeBtn = document.getElementById('showsActiveBtn');
+            const emptyBtn = document.getElementById('showsEmptyBtn');
+
+            if (showSchedule) {
+                activeList.classList.remove('hidden');
+                fallbackList.classList.add('hidden');
+                activeBtn.className = "px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold transition bg-accent-gold text-obsidian";
+                emptyBtn.className = "px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold transition text-neutral-400 hover:text-white";
+            } else {
+                activeList.classList.add('hidden');
+                fallbackList.classList.remove('hidden');
+                activeBtn.className = "px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold transition text-neutral-400 hover:text-white";
+                emptyBtn.className = "px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold transition bg-accent-gold text-obsidian";
+            }
+        }
+
+        // Presale Booking System Modals
+        function openTicketsModal(location, date, venue) {
+            const modal = document.getElementById('ticketsModal');
+            document.getElementById('modalShowTitle').textContent = `Live at ${venue}`;
+            document.getElementById('modalShowDetails').textContent = `${location} — ${date} — Doors open at 19:30`;
+            modal.classList.remove('hidden');
+        }
+
+        function closeTicketsModal() {
+            document.getElementById('ticketsModal').classList.add('hidden');
+        }
+
+        function handleTicketPurchase() {
+            closeTicketsModal();
+            showToast("Presale Code Claimed! Please check your email inbox momentarily.", "fa-solid fa-ticket");
+        }
+
+        // Newsletter processing block
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('subscriberEmail').value;
+            showToast("Thank you for staying close. Your connection has been established.", "fa-solid fa-paper-plane");
+            document.getElementById('subscriberEmail').value = "";
+        }
+
+        // Electronic Press Kit download simulator
+        function triggerEPKDownload() {
+            showToast("Preparing official Electronic Press Kit (EPK) archive download...", "fa-solid fa-file-pdf");
+        }
+
+        // Toast feedback system
+        function showToast(message, iconClass = "fa-solid fa-circle-check") {
+            const toast = document.getElementById('toastNotification');
+            const msgEl = document.getElementById('toastMessage');
+            const iconEl = document.getElementById('toastIcon');
+
+            iconEl.innerHTML = `<i class="${iconClass}"></i>`;
+            msgEl.textContent = message;
+
+            // Animate In
+            toast.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            // Stay active for 3500ms
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+
+        // Run slide show immediately upon boot
+        window.onload = function() {
+            startAutoSlide();
+        }
+    </script>
+</body>
+</html>
