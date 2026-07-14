@@ -89,7 +89,7 @@
             <a href="#about" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">About</a>
             <a href="#shows" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Shows</a>
             <a href="#contact" onclick="toggleMenu()" class="text-neutral-300 hover:text-accent-gold py-1">Contact</a>
-            <a href="#newsletter" onclick="toggleMenu()" class="mt-2 px-6 py-2.5 bg-accent-gold text-obsidian rounded-full font-bold">Stay Close</a>
+            <a href="#contact" onclick="toggleMenu()" class="mt-2 px-6 py-2.5 bg-accent-gold text-obsidian rounded-full font-bold">Get in Touch</a>
         </div>
     </header>
 
@@ -194,8 +194,9 @@
                 <a href="#music" class="w-full sm:w-auto px-8 py-4 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-full shadow-lg hover:shadow-accent-gold/20 transition-all duration-300 flex items-center justify-center gap-2 font-bold">
                     <i class="fa-solid fa-play"></i> Listen Now
                 </a>
-                <a href="#newsletter" class="w-full sm:w-auto px-8 py-4 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-full shadow-lg hover:shadow-accent-gold/20 transition-all duration-300 flex items-center justify-center gap-2 font-bold">
-                    <i class="fa-solid fa-paper-plane"></i> Join The Dream Garden
+               <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-accent-gold hover:bg-accent-goldLight text-obsidian rounded-full shadow-lg hover:shadow-accent-gold/20 transition-all duration-300 flex items-center justify-center gap-2 font-bold">
+               <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>                    <i class="fa-solid fa-paper-plane"></i> Join The Dream Garden
                 </a>
             </div>
         </div>
@@ -590,8 +591,9 @@
             </div>
 
             <!-- Operational contact details -->
-            <div class="md:col-span-4 space-y-4">
-                <h4 class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Business & Press</h4>
+            <div id="contact" class="md:col-span-4 space-y-4 scroll-mt-24">
+            <h4 class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Business & Press</h4>
+
                 <div class="space-y-2 text-xs text-neutral-400 font-light">
                     <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-neutral-600"></i> management@anastasiasolay.com</p>
                     <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-neutral-600"></i> bookings@anastasiasolay.com</p>
@@ -838,13 +840,6 @@
             closeTicketsModal();
             showToast("Presale Code Claimed! Please check your email inbox momentarily.", "fa-solid fa-ticket");
         }
-
-        // Newsletter processing block
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const email = document.getElementById('subscriberEmail').value;
-            showToast("Thank you for staying close. Your connection has been established.", "fa-solid fa-paper-plane");
-            document.getElementById('subscriberEmail').value = "";
         }
 
         // Electronic Press Kit download simulator
